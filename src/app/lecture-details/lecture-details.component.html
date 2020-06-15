@@ -1,0 +1,83 @@
+<div class="ui form">
+    <div *ngIf="lecture" style="padding: 50px;">
+        <h4 style="text-align:left"> {{lecture.name}} Details</h4>
+        <div style="text-align:left;">
+            <div class="field">
+                <label>Name of the Lecture*:</label>
+                <div class="field">
+                    <input [(ngModel)]="lecture.name" placeholder="Name" />
+                </div>
+            </div>
+            <div class="field">
+                <label>Location of the Lecture*:</label>
+                <div class="three fields">
+                    <div class="field">
+                        <select [(ngModel)]="lecture.building" class="ui fluid dropdown">
+                            <option value="">Building</option>
+                            <option value="KR1">Am Kranen 1</option>
+                            <option value="WE5">An der Weberei 5</option>
+                            <option value="F21">Feldkirchenstr. 21</option>
+                            <option value="M3">Markusplatz 3</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <input [(ngModel)]="lecture.floor" placeholder="Floor eg. 01" />
+                    </div>
+                    <div class="field">
+                        <input [(ngModel)]="lecture.room" placeholder="Room eg. 005" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Time of the Lecture*:</label>
+                <div class="three fields">
+                    <div class="field">
+                        <select [(ngModel)]="lecture.day" class="ui fluid dropdown">
+                            <option value="">Day</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <select [(ngModel)]="lecture.time.hours" class="ui fluid dropdown">
+                            <option value="">Hour</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <select [(ngModel)]="lecture.time.minutes" class="ui fluid dropdown">
+                            <option value="">Minute</option>
+                            <option value="00">00</option>
+                            <option value="15">15</option>
+                            <option value="30">30</option>
+                            <option value="45">45</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Department of the Lecture:</label>
+                <div class="field">
+                    <input [(ngModel)]="lecture.department" placeholder="Department" />
+                </div>
+            </div>
+        </div>
+        <p>* Please fill in these input fields!</p>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<a class="content">
+    <div class="header">What? {{lecture.name | uppercase}}</div>
+    <div class="description">Where? {{lecture.building}}/{{lecture.floor}}.{{lecture.room}}</div>
+    <div class="description">When? {{lecture.day}}, {{lecture.time.hours}}:{{lecture.time.minutes}}</div>
+    <div *ngIf="lecture.department" class="description">Department: {{lecture.department}}</div>
+</a>
