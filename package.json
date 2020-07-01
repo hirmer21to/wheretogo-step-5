@@ -41,7 +41,7 @@
     "require-dot-file": "^0.4.0",
     "run-sequence": "^2.2.1",
     "rxjs": "^6.3.3",
-    "semantic-ui": "^2.4.2",
+    "semantic-ui-css": "^2.4.1",
     "yamljs": "^0.3.0",
     "zone.js": "^0.8.26"
   },
