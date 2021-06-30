@@ -8,8 +8,8 @@ import { LectureService } from '../shared/lecture.service';
   styles: []
 })
 export class TimetableComponent implements OnInit {
-  lectures: Lecture[];
-  selectedLecture: Lecture;
+  lectures: Lecture[] = [];
+  selectedLecture: Lecture = {id: 0, name:'', room:'', day:'', time: {hours: 0, minutes: 0}, building:'', floor:''};
 
   onSelect(lecture: Lecture): void {
     this.selectedLecture = lecture;
