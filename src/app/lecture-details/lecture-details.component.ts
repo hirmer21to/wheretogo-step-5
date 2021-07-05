@@ -7,7 +7,7 @@ import { Lecture } from '../shared/lecture';
   styles: []
 })
 export class LectureDetailsComponent implements OnInit {
-  @Input() lecture: Lecture;
+  @Input() lecture: Lecture | undefined;
 
   constructor() { }
 

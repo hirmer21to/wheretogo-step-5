@@ -9,21 +9,21 @@ import { LectureService } from '../shared/lecture.service';
 })
 export class TimetableComponent implements OnInit {
   lectures: Lecture[] = [];
-  selectedLecture: Lecture = {id: 0, name:'', room:'', day:'', time: {hours: 0, minutes: 0}, building:'', floor:''};
+  selectedLecture: Lecture | undefined;
 
   onSelect(lecture: Lecture): void {
     this.selectedLecture = lecture;
   }
 
-  constructor(private lectureService: LectureService) { }
+  constructor(private lectureService: LectureService) {}
 
   ngOnInit() {
     this.getLectures();
   }
 
   getLectures(): void {
-    this.lectureService.getLectures()
-    .subscribe(lectures => this.lectures = lectures);
+    this.lectureService
+      .getLectures()
+      .subscribe(lectures => (this.lectures = lectures));
   }
-
 }
